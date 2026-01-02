@@ -1,40 +1,49 @@
-# Banking Risk Analytics Dashboard 🏦
+# Banking Analysis Dashboard 🏦
 
 ## 📊 Project Overview
-This Power BI project is a comprehensive **Risk Assessment & Client Portfolio Analysis** solution designed for the banking sector. The dashboard helps financial institutions minimize lending risks by analyzing client profiles, loan distribution, and deposit patterns.
+This banking analytics solution provides a comprehensive view of **Client Profiles, Loan Portfolios, and Deposit Patterns**. It helps financial institutions analyze client behavior, income distribution, and engagement metrics to support strategic decision-making in customer management and operational growth.
 
-By integrating data across clients, banking services, advisors, and time periods, this tool enables stakeholders to make data-driven decisions regarding credit approval, customer relationship management, and revenue optimization.
+The dashboard integrates data across Clients, Banking Services, Advisors, and Time Periods to provide a holistic view of the bank's performance.
 
-## 🎯 Business Objectives
-- **Risk Mitigation:** Evaluate loan repayment likelihood by correlating income bands with credit card balances and loan types.
-- **Customer Segmentation:** Categorize clients based on engagement duration and income levels to tailor financial products.
-- **Revenue Tracking:** Monitor processing fees and interest-bearing assets across different banking portfolios.
-
-## 🔑 Key Performance Indicators (KPIs)
+## 🎯 Key Performance Indicators (KPIs)
 
 ### 1. Client Metrics
-- **Total Clients:** Distinct count of active banking customers.
-- **Engagement Days:** Analysis of the duration of client relationships (Customer Loyalty).
-- **Income Band:** Dynamic segmentation of clients into income levels:
-  - *Low (<100K)*
-  - *Mid (<300K)*
-  - *High (>300K)*
+- **Total Clients:** Distinct count of active banking clients.
+- **Engagement Days:** Duration of client relationships with the bank (Customer Loyalty).
+- **Income Band:** Categorized client income levels (Low, Mid, High).
 
-### 2. Loan Portfolio Analysis
-- **Total Loan Exposure:** Aggregated sum of all lending products.
-- **Bank Loans:** Traditional personal and housing loans.
-- **Business Lending:** Capital allocated to small/medium business clients.
-- **Credit Card Balance:** Outstanding revolving credit amounts.
+### 2. Loan Portfolio
+- **Total Loan:** Combined value of bank loans, business lending, and credit card balances.
+- **Bank Loan:** Sum of traditional personal/housing loans.
+- **Business Lending:** Loans allocated to small businesses.
+- **Credit Cards Balance:** Outstanding credit card debt.
 
-### 3. Deposit & Liquidity
-- **Total Deposits:** Combined liquidity across all account types.
-- **Savings Accounts:** Interest-bearing deposit analysis.
-- **Checking Accounts:** Daily transactional volume.
-- **Foreign Currency:** Holdings in non-domestic currency (FX Risk).
+### 3. Deposit Analysis
+- **Total Deposit:** Combined liquidity across all account types.
+- **Bank Deposit:** Core banking deposits.
+- **Savings Account:** Interest-bearing deposit accounts.
+- **Checking Accounts:** Daily transactional accounts.
+- **Foreign Currency Account:** Holdings in non-domestic currency.
 
-### 4. Revenue & Fees
-- **Total Fees:** Aggregate of processing and maintenance fees.
-- **Processing Fees:** Calculated dynamically based on client fee structures (e.g., Standard vs. High-Net-Worth rates).
+### 4. Revenue Metrics
+- **Total Fees:** Processing and maintenance fees calculated as a percentage of loans.
+- **Processing Fees:** Variable fees generated based on client fee structures.
+
+## 🔧 Data Transformation & Calculations
+This project involves data cleaning, relationship modeling, and custom DAX calculations to derive actionable insights:
+
+- **Engagement Timeframe:** Categorization of client relationship duration.
+- **Engagement Days:** Exact count of days since the client joined (calculated using `DATEDIFF`).
+- **Income Band:** Dynamic grouping of clients into income tiers:
+  - *<100K:* Low
+  - *<300K:* Mid
+  - *Else:* High
+- **Processing Fees:** Dynamic fee calculation based on client service level (e.g., High tier = 0.05).
+
+## 🛠️ Tools Used
+- **Power BI** (Dashboarding & Visualization)
+- **DAX** (Data Analysis Expressions for custom metrics)
+- **Power Query** (Data Cleaning & Transformation)
 
 ## 🛠️ Technical Implementation
 
