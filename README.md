@@ -1,37 +1,51 @@
-Banking-Analysis-Dashboard-by-PowerBI-
-A Power BI risk analytics dashboard for banking that evaluates loan repayment likelihood using interconnected client, banking, gender, advisor, and period data. Includes data cleaning, relationship modeling, and an Engagement Timeframe metric to improve lending decisions and reduce financial risk.
+# Banking Risk Analytics Dashboard 🏦
 
-🏦 Banking Risk Analytics Dashboard
-A comprehensive Power BI dashboard for banking risk assessment and client portfolio analysis, enabling data-driven lending decisions and customer relationship management.
+## 📊 Project Overview
+This Power BI project is a comprehensive **Risk Assessment & Client Portfolio Analysis** solution designed for the banking sector. The dashboard helps financial institutions minimize lending risks by analyzing client profiles, loan distribution, and deposit patterns.
 
-📊 Project Overview
-This banking analytics solution helps financial institutions minimize lending risks by analyzing client profiles, loan portfolios, and deposit patterns. The dashboard provides insights into client behavior, income distribution, and engagement metrics to support strategic decision-making in credit approval and customer management.
+By integrating data across clients, banking services, advisors, and time periods, this tool enables stakeholders to make data-driven decisions regarding credit approval, customer relationship management, and revenue optimization.
 
-🎯 Key Performance Indicators (KPIs)
-Client Metrics
-Total Clients: Distinct count of banking clients
-Engagement Days: Duration of client relationships with the bank
-Income Band: Categorized client income levels (Low, Mid, High)
-Loan Portfolio
-Total Loan: Combined bank loans, business lending, and credit card balances
-Bank Loan: Sum of traditional bank loans
-Business Lending: Loans allocated to small businesses
-Credit Cards Balance: Outstanding credit card amounts
-Deposit Analysis
-Total Deposit: Combined deposits across all account types
-Bank Deposit: Core banking deposits
-Savings Account: Interest-bearing deposit accounts
-Checking Accounts: Daily transactional accounts
-Foreign Currency Account: Non-domestic currency holdings
-Revenue Metrics
-Total Fees: Processing and maintenance fees calculated as loan percentage
-Processing Fees: Variable fees based on client fee structure
-🔧 Data Transformation & Calculations
-Data Cleaning & Feature Engineering
-Engagement Timeframe: Client relationship duration categorization
-Engagement Days: Exact days since client joined (using DATEDIFF)
-Income Band: Binned categories (<100K: Low, <300K: Mid, else: High)
-Processing Fees: Dynamic calculation based on fee structure (High: 0.05)
+## 🎯 Business Objectives
+- **Risk Mitigation:** Evaluate loan repayment likelihood by correlating income bands with credit card balances and loan types.
+- **Customer Segmentation:** Categorize clients based on engagement duration and income levels to tailor financial products.
+- **Revenue Tracking:** Monitor processing fees and interest-bearing assets across different banking portfolios.
+
+## 🔑 Key Performance Indicators (KPIs)
+
+### 1. Client Metrics
+- **Total Clients:** Distinct count of active banking customers.
+- **Engagement Days:** Analysis of the duration of client relationships (Customer Loyalty).
+- **Income Band:** Dynamic segmentation of clients into income levels:
+  - *Low (<100K)*
+  - *Mid (<300K)*
+  - *High (>300K)*
+
+### 2. Loan Portfolio Analysis
+- **Total Loan Exposure:** Aggregated sum of all lending products.
+- **Bank Loans:** Traditional personal and housing loans.
+- **Business Lending:** Capital allocated to small/medium business clients.
+- **Credit Card Balance:** Outstanding revolving credit amounts.
+
+### 3. Deposit & Liquidity
+- **Total Deposits:** Combined liquidity across all account types.
+- **Savings Accounts:** Interest-bearing deposit analysis.
+- **Checking Accounts:** Daily transactional volume.
+- **Foreign Currency:** Holdings in non-domestic currency (FX Risk).
+
+### 4. Revenue & Fees
+- **Total Fees:** Aggregate of processing and maintenance fees.
+- **Processing Fees:** Calculated dynamically based on client fee structures (e.g., Standard vs. High-Net-Worth rates).
+
+## 🛠️ Technical Implementation
+
+### Data Modeling
+- Implemented a **Star Schema** architecture connecting the central Fact table with Dimension tables: `Client`, `Banking`, `Gender`, `Advisor`, and `Date`.
+- Established relationships to enable slicing data by advisor performance and demographic segments.
+
+### Data Transformation (DAX & Power Query)
+- **Data Cleaning:** Handled missing values and standardized data types for financial accuracy.
+- **Engagement Logic:** Created `Engagement Timeframe` using `DATEDIFF` to calculate precise client tenure.
+- **Conditional Logic:** Used DAX switches to assign `Income Band` and calculate `Processing Fees` (e.g., *Fee = Loan Amount * 0.05 for specific tiers*).
 
 Snapshots:
 home page-
@@ -43,5 +57,11 @@ deposit analysis-
 summary page-
 <img width="1918" height="1038" alt="deposit analysis" src="https://github.com/user-attachments/assets/ca05ae8c-e281-425a-aed8-5e4040f0a64d" />
 
+## 🚀 How to Run
+1. Download the `.pbix` file from this repository.
+2. Open in **Microsoft Power BI Desktop**.
+3. Interact with the filters (Year, Month, Income Band) to explore the data.
 
+---
+**Author:** Vaibhavi Halloli
 
