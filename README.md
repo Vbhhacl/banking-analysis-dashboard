@@ -34,9 +34,13 @@ Income Band: Binned categories (<100K: Low, <300K: Mid, else: High)
 Processing Fees: Dynamic calculation based on fee structure (High: 0.05)
 
 Snapshots:
+home page-
 <img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/34087b19-1e0b-4208-8ea9-a75679579030" />
+loan analysis-
 <img width="1918" height="1033" alt="image" src="https://github.com/user-attachments/assets/d6386987-6993-4332-aa11-1630d48d9342" />
+deposit analysis-
 <img width="1918" height="1038" alt="deposit analysis" src="https://github.com/user-attachments/assets/0987f6a8-be25-40ee-810e-30cc1d2f7c0f" />
+summary page-
 <img width="1918" height="1038" alt="deposit analysis" src="https://github.com/user-attachments/assets/ca05ae8c-e281-425a-aed8-5e4040f0a64d" />
 
 
